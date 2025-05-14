@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- این خط اضافه شده -->
+    <title>{% block title %}سایت من{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="لوگو" style="height: 50px;">
+            <h1>سایت شخصی من</h1>
+        </div>
+        <nav>
+            <a href="/">خانه</a>
+            <a href="/about">درباره ما</a>
+            <a href="/services">خدمات</a>
+            <a href="/projects">نمونه‌کار</a>
+            <a href="/blog">بلاگ</a>
+            <a href="/contact">تماس با ما</a>
+            <a href="/comments">نظرات</a>
+            <a href="/faq">سوالات</a>
+            <a href="/gallery">گالری</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

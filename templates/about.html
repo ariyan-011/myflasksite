@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}درباره ما{% endblock %}
+
+{% block content %}
+<section class="about" style="display: flex; height: 100vh; margin: 0; padding: 0;">
+    <!-- ستون متن -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px;">
+        <h2>درباره ما</h2>
+        <p>ما یک تیم حرفه‌ای در زمینه طراحی سایت و اپلیکیشن هستیم که با هدف ارائه خدمات مدرن و با کیفیت کار می‌کنیم.</p>
+    </div>
+
+    <!-- ستون عکس -->
+    <div style="flex: 1;">
+        <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="تیم ما" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;" />
+    </div>
+</section>
+{% endblock %}

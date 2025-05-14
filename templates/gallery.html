@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}گالری{% endblock %}
+
+{% block content %}
+<section class="gallery-section">
+    <h2>نمونه پروژه‌ها</h2>
+    <p>در اینجا تعدادی از پروژه‌های طراحی شده ما رو ببین.</p>
+    <div class="gallery-grid">
+        <img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="نمونه اول">
+        <img src="{{ url_for('static', filename='images/gallery2.jpg') }}" alt="نمونه دوم">
+        <img src="{{ url_for('static', filename='images/gallery3.jpg') }}" alt="نمونه سوم">
+    </div>
+</section>
+{% endblock %}

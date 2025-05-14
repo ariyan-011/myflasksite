@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}نظرات کاربران{% endblock %}
+
+{% block content %}
+<section class="comments-section">
+    <h2>نظرات شما</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="نام شما" required>
+        <textarea name="text" placeholder="نظر شما..." required></textarea>
+        <button type="submit">ارسال نظر</button>
+    </form>
+
+    <div class="comments-list">
+        {% for comment in comments %}
+            <div class="comment">
+                <h4>{{ comment.name }}</h4>
+                <p>{{ comment.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}تماس با ما{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <h2>سفارشت رو ثبت کن</h2>
+    <p>چه پروژه‌ای در ذهن داری؟ با ما در میون بذار!</p>
+    <form method="POST">
+        <input type="text" name="name" placeholder="نام شما" required>
+        <textarea name="message" placeholder="توضیح پروژه‌ات رو بنویس..." required></textarea>
+        <button type="submit">ارسال پیام</button>
+    </form>
+</section>
+{% endblock %}
